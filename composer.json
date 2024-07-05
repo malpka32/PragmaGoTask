@@ -1,0 +1,25 @@
+{
+  "name": "malpka32/feecalculator",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Dawid Ples",
+      "email": "dawid.ples@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "PragmaGoTech\\Interview\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^8.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "11.2.6",
+    "phpstan/phpstan": "1.11.6"
+  },
+  "scripts": {
+    "phpstan": "phpstan analyse"
+  }
+}

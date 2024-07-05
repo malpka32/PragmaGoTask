@@ -1,0 +1,20 @@
+services:
+  example:
+    build:
+      context: .
+      target: example
+    volumes:
+      - .:/app
+    entrypoint: bash -c "php ./src/Application/ExampleCalculate.php"
+  tests:
+    build:
+      context: .
+      target: tests
+    environment:
+      - XDEBUG_MODE=coverage
+    entrypoint: [ "./vendor/bin/phpunit" ]
+  phpstan:
+    build:
+      context: .
+      target: tests
+    entrypoint: [ "./vendor/bin/phpstan" ]
